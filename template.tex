@@ -1,0 +1,179 @@
+% #######################################
+% ########### FILL THESE IN #############
+% #######################################
+\def\mytitle{Coursework Report}
+\def\mykeywords{Deadalus Delicatessen, Monster Bakery, SET08101, Bruce McClelland}
+\def\myauthor{Bruce McClelland}
+\def\contact{40209907@live.napier.ac.uk}
+\def\mymodule{Web Technology (SET08101)}
+% #######################################
+% #### YOU DON'T NEED TO TOUCH BELOW ####
+% #######################################
+\documentclass[10pt, a4paper]{article}
+\usepackage[a4paper,outer=1.5cm,inner=1.5cm,top=1.75cm,bottom=1.5cm]{geometry}
+\twocolumn
+\usepackage{graphicx}
+\graphicspath{{./images/}}
+%colour our links, remove weird boxes
+\usepackage[colorlinks,linkcolor={black},citecolor={blue!80!black},urlcolor={blue!80!black}]{hyperref}
+%Stop indentation on new paragraphs
+\usepackage[parfill]{parskip}
+%% Arial-like font
+\usepackage{lmodern}
+\renewcommand*\familydefault{\sfdefault}
+%Napier logo top right
+\usepackage{watermark}
+%Lorem Ipusm dolor please don't leave any in you final report ;)
+\usepackage{lipsum}
+\usepackage{xcolor}
+\usepackage{listings}
+%give us the Capital H that we all know and love
+\usepackage{float}
+%tone down the line spacing after section titles
+\usepackage{titlesec}
+%Cool maths printing
+\usepackage{amsmath}
+%PseudoCode
+\usepackage{algorithm2e}
+
+\titlespacing{\subsection}{0pt}{\parskip}{-3pt}
+\titlespacing{\subsubsection}{0pt}{\parskip}{-\parskip}
+\titlespacing{\paragraph}{0pt}{\parskip}{\parskip}
+\newcommand{\figuremacro}[5]{
+    \begin{figure}[#1]
+        \centering
+        \includegraphics[width=#5\columnwidth]{#2}
+        \caption[#3]{\textbf{#3}#4}
+        \label{fig:#2}
+    \end{figure}
+}
+
+\lstset{
+	escapeinside={/*@}{@*/}, language=C++,
+	basicstyle=\fontsize{8.5}{12}\selectfont,
+	numbers=left,numbersep=2pt,xleftmargin=2pt,frame=tb,
+    columns=fullflexible,showstringspaces=false,tabsize=4,
+    keepspaces=true,showtabs=false,showspaces=false,
+    backgroundcolor=\color{white}, morekeywords={inline,public,
+    class,private,protected,struct},captionpos=t,lineskip=-0.4em,
+	aboveskip=10pt, extendedchars=true, breaklines=true,
+	prebreak = \raisebox{0ex}[0ex][0ex]{\ensuremath{\hookleftarrow}},
+	keywordstyle=\color[rgb]{0,0,1},
+	commentstyle=\color[rgb]{0.133,0.545,0.133},
+	stringstyle=\color[rgb]{0.627,0.126,0.941}
+}
+
+\thiswatermark{\centering \put(336.5,-38.0){\includegraphics[scale=0.8]{logo}} }
+\title{\mytitle}
+\author{\myauthor\hspace{1em}\\\contact\\Edinburgh Napier University\hspace{0.5em}-\hspace{0.5em}\mymodule}
+\date{}
+\hypersetup{pdfauthor=\myauthor,pdftitle=\mytitle,pdfkeywords=\mykeywords}
+\sloppy
+% #######################################
+% ########### START FROM HERE ###########
+% #######################################
+\begin{document}
+    \maketitle
+    \begin{abstract}
+        %Replace the lipsum command with actual text 
+        \lipsum[2]
+    \end{abstract}
+    
+    \textbf{Keywords -- }{\mykeywords}
+    
+    \section{Game Descriptor}
+	My game is a free-to-play browser based adventure-RPG where the player controls a character. They select their gender,
+	name and starting item which will be with them until used. There will be a myriad of game changing choices. 
+	These options have an impact on future dialogue as well as game length. The game can also be reset easily if a mistake
+	was made or just for a more wholesome experience if the player wishes to experience all it has to offer.
+	
+	\subsection{Adventure Based Game}
+	\\
+	Role Playing Game (RPG) is a genre that creates incredible depth and atmosphere whilst you take control of a character(s)
+	within a fictional world. There is a lot of hybrid-genres available within the mothership genre, so it is a very
+	challenging genere to describe.\\
+	Some sub-genres include; 
+	\begin{itemize}
+		\item Strategy-RPG
+		\item Adventure-RPG
+		\item Online-RPG
+		\item Action-RPG
+	\end{itemize}
+	For the purpose of this report, we will talk in greater detail about text-based adventure RPGs.
+	Text-based adventure RPG games have been around for a very long time. It is largely story driven
+	with events unfolding when players make selections from the multiple on-screen options.
+	
+	\subsection{Story Draft}
+	\paragraph{Daedalus Delicatessen} is a small bakery right in the center of the bustling city Cornelia. One of the only
+	human populated nations in planet Terra. Monsteria is a condition that has plagued Terra since the dawn of time where
+	humans turn into blood thirsty beasts, some of which call Cornelia home. Of course this caused mass panic and with skin
+	several times stronger than tungsten, the royal guards are not remotely effective. \\ 
+	\hspace{5mm} Child of Queen Lavender, you are a world renowned baker that makes the most delicious cakes. With the
+	ancestral power to slay the stomachs of even the fiercest creatures, you are the worlds only hope to restore humankind
+	to it's former glory. To do this, you need them the most irresistable cupcakes and become Cornelias only hope!
+    \figuremacro{h}{delicatessen}{ImageTitle}{ - Some Descriptive Text}{1.0}
+	
+	\section{Background Research}
+	\cite{Keshav}
+	\cite{sessionStorage}
+	\cite{localStorage}
+	Some common formatting you may need uses these commands for \textbf{Bold Text}, \textit{Italics}, and \underline{underlined}.
+	\subsection{LineBreaks}
+	Here is a line
+    
+    Here is a line followed by a double line break.
+	This line is only one line break down from the above, Notice that latex can ignore this
+    
+    We can force a break \\ with the break operator.
+    
+	\subsection{Maths}
+    Embedding Maths is Latex's bread and butter    
+    
+    {\centering \Large \(
+        J = \begin{bmatrix}
+            \frac{\delta e}{\delta \theta _0}
+            \frac{\delta e}{\delta \theta _1}
+            \frac{\delta e}{\delta \theta _2}
+        \end{bmatrix}
+        = e_{current} - e_{target} 
+    \)\par}
+	
+	\subsection{Code Listing}
+    You can load segments of code from a file, or embed them directly.
+    
+\begin{lstlisting}[caption = Hello World! in c++]
+#include <iostream>
+
+int main() {
+    std::cout << "Hello World!" << std::endl;
+    std::cin.get();
+    return 0;
+}
+\end{lstlisting}
+
+\subsection{PseudoCode}
+
+\begin{algorithm}[h]
+\For{$i = 0$ \KwTo $100$}{
+ print\_number = true\;
+\If{i is divisible by 3}{
+ print "Fizz"\;
+ print\_number = false\;
+}
+\If{i is divisible by 5}{
+ print "Buzz"\;
+ print\_number = false\;
+}
+\If{print\_number}{
+    print i\;
+}
+print a newline\;
+}
+\caption{FizzBuzz}
+\end{algorithm}
+	
+\section{Conclusion}	
+\bibliographystyle{ieeetr}
+\bibliography{references}
+		
+\end{document}

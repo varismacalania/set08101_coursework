@@ -5,23 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/style.css" type="text/css"/>
     <link rel="icon" href="../images/favicon.ico" type="image/x-icon"/>
-    <script src="daedalus_delicatessen.js"></script>
+    <script src="../javascript/daedalus_delicatessen.js"></script>
     <title>Daedalus Delicatessen</title>
 </head>
 <body>
     <header>
-        <div class="container">
-            <h3 class="head">Daedalus Delicatessen</h3>
-            <nav>
-                <ul>
-                    <li><a href="#"><img src="../images/daedalus_delicatessen_logo.jpg" alt="logo" width="200" height="50"></a></li>
-                    <li><a href="#">Game</a></li>
-                    <li><a href="#">Recipe Book</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Author</a></li>
-                </ul>
-            </nav>
-        </div>
+        <img class="logo" src="../images/daedalus_delicatessen_logo.jpg" width="250" height="60">
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <nav>
+            <ul>
+                <li><a href="#">Game</a></li>
+                <li><a href="#">Recipe Book</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Author</a></li>
+            </ul>
+        </nav>
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+        </label>
     </header>
 </body>
 </html>

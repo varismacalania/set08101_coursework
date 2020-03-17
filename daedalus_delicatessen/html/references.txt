@@ -9,3 +9,33 @@ https://varismacalania.github.io/set08101_coursework/Daedalus_Delicatessen/html/
 REFERENCES
 
 navbar help - https://www.youtube.com/watch?v=8QKOaTYvYUAK
+
+body {
+    font-family: 'Arial', sans-serif;
+	font-weight: 400;
+    max-width: inherit;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+	background: #FFDDFF;
+
+}
+
+div.content {
+    display: flex;
+    place-items: center;
+    flex: 1;
+}
+
+main {
+    grid-column: 3;
+    padding: 0 20px;
+    align: center
+}
+
+aside {
+    flex: 0 0 180px;
+    padding: 0 10px;
+    order: -1;
+}

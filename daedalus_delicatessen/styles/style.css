@@ -1,23 +1,22 @@
-/* good for multi-use */
 :root {
-  --background: #CCCCFF;
+    --background: #CCCCFF;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
 body {
 	margin: 0;
+    padding: 0;
+    max-width: inherit;
 	background: #FFDDFF;
-	font-family: 'Arial', sans-serif;
+    min-height: 100vh;
+	font-family: 'Work Sans', sans-serif;
 	font-weight: 400;
+
 }
 
-.content {
-  height: 200vh;
-  background-color: #asdf;
-  background-blend-mode: multiply;
-  background-size: cover;
-  display: grid;
-  place-items: center;
-}
 
 /* navigation styles start here */
 
@@ -114,7 +113,7 @@ nav a {
     text-decoration: none;
     /* rem relative to root font-size */
     font-size: 1rem;
-    text-transform: uppercase;
+    /* text-transform: uppercase;*/
     opacity: 0;
     /* as not checked, much faster transition */
     transition: opacity 150ms ease-in-out;
@@ -143,14 +142,13 @@ nav a:hover {
     header {
         display: grid;
         /* 4 columns */
-        grid-template-columns: 1fr auto minmax(600px, 1fr);
+        grid-template-columns: 1fr auto minmax(600px, 12fr) 1fr;
     }
 
-  .logo {
-      grid-column: 1 / 2;
-      margin-left: 4em;
-  }
-
+    .logo {
+        grid-column: 1 / 2;
+        margin-left: 4em;
+    }
 
     nav {
         position: relative;
@@ -160,43 +158,134 @@ nav a:hover {
         background: none;
         top: initial;
         left: initial;
-
         grid-column: 3/4;
         display: flex;
         justify-content: flex-end;
         align-items: center;
     }
 
-  nav ul {
-    display: flex;
-  }
+    nav ul {
+        display: flex;
+    }
 
-  nav li {
-    margin-right: 3em;
-    margin-bottom: 0;
-  }
+    nav li {
+        margin-right: 3em;
+        margin-bottom: 0;
+    }
 
-  nav a {
-    opacity: 1;
-    position: relative;
-  }
+    nav a {
+        opacity: 1;
+        position: relative;
+    }
 
-  nav a::before {
-    content: '';
-    display: block;
-    height: 4px;
-    background: black;
-    position: absolute;
-    top: -120%;
-    left: 0;
-    right: 0;
-    transform: scale(0, 1);
-    transition: transform ease-in-out 250ms;
-  }
+    nav a::before {
+        content: '';
+        display: block;
+        height: 4px;
+        background: black;
+        position: absolute;
+        top: -120%;
+        left: 0;
+        right: 0;
+        transform: scale(0, 1);
+        transition: transform ease-in-out 250ms;
+    }
 
-  nav a:hover::before {
-    transform: scale(1,1);
-  }
+    nav a:hover::before {
+        transform: scale(1,1);
+    }
 }
 
 /* navigation bar end */
+
+
+/* general css */
+
+
+/* good for multi-use functions to turn background purple */
+
+.content {
+    display: grid;
+    min-height: 70vh;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: min-content 1fr;
+    padding-top: 60px;
+    align-content: center;
+    padding-left: 10px;
+}
+
+main {
+    grid-row: 2;
+    grid-column: 2 / 3;
+    padding: 0 20px;
+    position: relative;
+    text-align: center;
+}
+
+
+img.image{
+    grid-row: 1;
+    grid-column: 2 / 3;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    max-width:100%;
+    opacity: 0.4;
+}
+
+main.text{
+    grid-row: 2;
+    grid-column: 2 / 3;
+    padding: 0 20px;
+    position: relative;
+    text-align: center;
+}
+
+
+aside {
+    grid-row: 1;
+    grid-column: 1 / 2;
+    padding: 0 10px;
+    position: relative;
+    text-align: center;
+
+}
+
+main {
+    grid-row:2;
+    grid-column: 2/3;
+    width: 800px;
+    background-color: #CCCCFF;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 2px;
+}
+
+.btn-grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    margin-top: 20px;
+    padding-left: 120px;
+    padding-right: 100px;
+    align-content: center;
+}
+
+.btn {
+    background-color: hsl(300, 100%, 93%);
+    border: 1px solid hsl(300, 100%, 73%);
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: #000000;
+    outline: none;
+}
+
+.btn:hover {
+    color: #000000;
+}
+
+.btn:hover {
+    border-color: #000000;
+}
